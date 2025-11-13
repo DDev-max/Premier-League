@@ -3,6 +3,8 @@
 Proyecto académico en Python para analizar estadísticas de jugadores de la Premier League
 utilizando Programación Orientada a Objetos, Análisis Exploratorio de Datos y visualización.
 
+Realizado por Claudio Poveda Sánchez y Eduardo Roselló Granados.
+
 ## Estructura del proyecto
 - `src/`: código fuente (clases, servicios, visualización)
 - `data/raw`: CSV original (`premier.csv`)
