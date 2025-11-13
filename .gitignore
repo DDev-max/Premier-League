@@ -2,6 +2,6 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 .DS_Store
-data/processed/*
+src/data/processed/*
 reports/*
 *.pyc
