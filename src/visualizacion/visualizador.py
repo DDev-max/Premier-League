@@ -1,2 +1,3 @@
 class Visualizador:
-    pass
+    def __init__(self):
+        pass
