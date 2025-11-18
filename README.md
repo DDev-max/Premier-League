@@ -20,4 +20,4 @@ pandas, matplotlib, seaborn, plotly, scikit-learn, streamlit, jupyter
 1. (Opcional) Crear entorno virtual
 2. Instalar dependencias
 3. Colocar `data/raw/premier.csv`
-4. Ejecutar notebooks o `streamlit run dashboard/app.py`
+4. Ejecutar notebooks o `streamlit run dashboard/app.py` o con `python -m streamlit run dashboard/app.py`
