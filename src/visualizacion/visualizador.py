@@ -116,5 +116,44 @@ class Visualizador:
         print("---Descripción---")
         print("Este gráfico permite a los analistas identificar de forma interactiva a jugadores")
         print("que anotan muchos goles con pocos minutos, lo que sugiere una alta eficiencia.")
+        print("El último gráfico interactivo es crucial para tomar decisiones en un equipo")
+        print("en muchas ocasiones se utiliza para cambiar la posición natural del jugador")
+        print("Por ejemplo grandes jugadores han cambiado de posición con el paso del tiempo;")
+        print("Messi era delantero en sus inicios, hoy juega de 10.")
+        print("Siendo más específico el jugador Brendfort es un lateral que tiene 3 goles;")
+        print("el técnico podría probar alinear al jugador en una posición más ofensiva")
+        print("que igual sea por la banda, por ejemplo de extremo derecho o izquierdo.")
+        print("-----------------------------\n")
+
+    def generar_heatmap_eficiencia(self):
+        """
+        Genera un Heatmap para analizar la correlación entre la habilidad técnica (regate)
+        y la eficacia para progresar el juego.
+        """
+        columnas_heatmap = ['Dribbles exitosos %', 'Progressive Passes', 'Carries progresivos %', 'Pass Completion %']
+
+        # Calcular la matriz de correlación
+        correlaciones = self.__dataFrame[columnas_heatmap].corr()
+
+        # Caracteristicas del Heatmap
+        plt.figure(figsize=(10, 8))
+        sns.heatmap(
+            correlaciones,
+            annot=True,
+            cmap='plasma',
+            fmt=".2f",
+            linewidths=.5,
+            cbar_kws={'label': 'Coeficiente de Correlación'}
+        )
+        plt.title('Heatmap: Correlación entre Eficacia Técnica y Progreso del Juego', fontsize=14)
+        plt.show()
+
+        print("\n---Descripción---")
+        print("Este gráfico identifica si la alta habilidad individual (Dribbles) se traduce en un avance efectivo del juego (Progressive Passes).")
+        print("Una correlación fuerte (color intenso) sugiere que la habilidad individual es clave para la estrategia del equipo.")
+        print("El análisis de correlación confirma que la precisión simple (Pass Completion %) es un factor independiente")
+        print("Lo más revelador es la débil correlación entre la habilidad de regate (Dribbles exitosos %) y la progresión del juego")
+        print("Esto sugiere que las decisiones tácticas del jugador (hacer un pase progresivo o una carrera progresiva) son un mejor predictor de la contribución estratégica")
+        print("del jugador que su habilidad pura para regatear ")
         print("-----------------------------\n")
 
