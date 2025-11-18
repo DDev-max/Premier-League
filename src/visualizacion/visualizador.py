@@ -6,10 +6,8 @@ from typing import List
 
 
 class Visualizador:
-<<<<<<< Updated upstream
     def __init__(self):
         pass
-=======
     """
     Clase encargada de crear visualizaciones estáticas e interactivas
     a partir de la DataFrame limpia.
@@ -41,10 +39,12 @@ class Visualizador:
         plt.grid(axis='y', alpha=0.5)
         plt.show()
 
-        print("--- INSIGHT (Narrativa) ---")
+        print("---Descripción---")
         print("La distribución de goles está fuertemente sesgada hacia el extremo inferior.")
         print("La mayoría de los jugadores tienen pocos o cero goles, indicando que la producción")
-        print("ofensiva recae en una pequeña élite de delanteros.")
+        print("Los jugadores defensivos como porteros, defensas y mediocampista defensivos tiene baja.")
+        print("cuota goleadora, por otra parte se observa que los mediocampistas ofensivos tienden a dar.")
+        print("más asistencias pero ya tienen cuota de gol, Los delanteros tiene más goles que asistencias .")
         print("-----------------------------\n")
 
     # --- REQUISITO: GRÁFICO 2 - SCATTER PLOT (Correlación) ---
@@ -65,7 +65,7 @@ class Visualizador:
         plt.grid(True, linestyle='--', alpha=0.6)
         plt.show()
 
-        print("--- 📝 INSIGHT (Narrativa) ---")
+        print("--- Descripción ---")
         print("Existe una correlación positiva moderada entre Goles y Asistencias, lo cual es")
         print("esperable en jugadores ofensivos. Los puntos más alejados (outliers superiores)")
         print("representan a los 'jugadores estrella' que dominan ambos métricas.")
@@ -90,7 +90,7 @@ class Visualizador:
         plt.tight_layout()
         plt.show()
 
-        print("---INSIGHT (Narrativa) ---")
+        print("---Descripción---")
         if not top_goleadores.empty:
             print(
                 f"El máximo goleador es {top_goleadores['Player'].iloc[0]} con {top_goleadores['Goals'].iloc[0]} goles.")
@@ -113,8 +113,8 @@ class Visualizador:
 
         fig.show()
 
-        print("---INSIGHT (Narrativa) ---")
+        print("---Descripción---")
         print("Este gráfico permite a los analistas identificar de forma interactiva a jugadores")
         print("que anotan muchos goles con pocos minutos, lo que sugiere una alta eficiencia.")
         print("-----------------------------\n")
->>>>>>> Stashed changes
+
