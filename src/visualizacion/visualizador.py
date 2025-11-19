@@ -55,7 +55,7 @@ class Visualizador:
             return
 
         plt.figure(figsize=(10, 6))
-        sns.scatterplot(x=x_col, y=y_col, data=self.__dataFrame, hue='Position', palette='viridis', alpha=0.7)
+        sns.scatterplot(x=x_col, y=y_col, data=self.__dataFrame, palette='viridis', alpha=0.7)
 
         # Requisito: Título claro y Narrativa/Insight
         plt.title('Goles vs. Asistencias: Productividad de los Jugadores', fontsize=14)
