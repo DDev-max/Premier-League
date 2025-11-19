@@ -13,17 +13,35 @@ class Jugador:
 @property
 def name(self):
     return self.__name
+@name.setter
+def name(self, nuevo_nombre):
+    self.__name = nuevo_nombre
 
 
 @property
 def team(self):
     return self.__team
+@team.setter
+def team(self, nuevo_equipo):
+    self.__team = nuevo_equipo
 
+@property
+def position(self):
+    return self.__position
+@team.setter
+def position(self, nueva_posicion):
+    self.__position = nueva_posicion
+
+@property
+def age(self):
+    return self.__age
+@team.setter
+def age(self, nueva_edad):
+    self.__age = nueva_edad
 
 @property
 def goals(self):
     return self.__goals
-
 
 @goals.setter
 def goals(self, nuevo_valor: int):
@@ -44,3 +62,10 @@ def minutes(self, nuevo_valor: float):
         self.__minutes = nuevo_valor
     else:
         print("Advertencia: Los minutos solo deben ser incrementados.")
+
+@property
+def assist(self):
+    return self.__assist
+@team.setter
+def assist(self, nueva_assist):
+    self.__assist = nueva_assist
